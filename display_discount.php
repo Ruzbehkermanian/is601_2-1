@@ -31,7 +31,7 @@ $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the 
 </head>
 <body>
     <main>
-        <h1>This page is under construction</h1>
+        <h1>Product Discount Calculator</h1>
 
         <label>Product Description:</label>
         <span><b><i><?php echo $Product_Description; ?></i></b></span><br>

@@ -1,8 +1,14 @@
 <?php
 
+//Step 1
 $Product_Description = $_POST['product_description'];
 $List_Price = $_POST['list_price'];
 $Discount_Percentage = $_POST['discount_percent'];
+
+//Step 3
+
+$list_price = "$".number_format($List_Price);
+$discount_percentage = $Discount_Percentage."%";
 
 ?>
 
@@ -23,10 +29,10 @@ $Discount_Percentage = $_POST['discount_percent'];
         <span><?php echo $Product_Description; ?></span><br>
 
         <label>List Price:</label>
-        <span><?php echo $List_Price; ?></span><br>
+        <span><?php echo $list_price; ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo $Discount_Percentage; ?></span><br>
+        <span><?php echo $discount_percentage; ?></span><br>
 
         <label>Discount Amount:</label>
         <span><?php echo ''; ?></span><br>

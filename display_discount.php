@@ -1,19 +1,21 @@
 <?php
 
 //Step 1
-$Product_Description = $_POST['product_description'];
-$List_Price = $_POST['list_price'];
-$Discount_Percentage = $_POST['discount_percent'];
+$Product_Description = filter_input(INPUT_POST, 'product_description');
+$List_Price = filter_input(INPUT_POST, 'list_price');
+$Discount_Percent = filter_input(INPUT_POST, 'discount_percent'); // step 3 modified
 
 //Step 3
 
 $list_price = "$".number_format($List_Price);
-$discount_percentage = $Discount_Percentage."%";
+// $discount_percentage = $Discount_Percentage."%";
+$Discount_Percent = $Discount_Percent. "%";
 
 //Step 4
 
-$Discount = $List_Price * $Discount_Percentage * .01; 
-$Discount_formatted = "$".number_format ($Discount); // display the formatted discount with $ sign (Step 5)
+$Discount = $List_Price * $Discount_Percent * .01; 
+$Discount_formatted = "$".number_format ($Discount); // Displaying $ sign for Step 3 modification
+// $Discount_formatted = "$".number_format ($Discount_Percent); // display the formatted discount with $ sign (Step 5)
 
 $Discount_Price = $List_Price - $Discount;
 $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the formatted discount (Step 5)
@@ -40,7 +42,7 @@ $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the 
         <span><b><?php echo $list_price; ?></b></span><br>
 
         <label>Standard Discount:</label>
-        <span><b><?php echo $discount_percentage; ?></b></span><br>
+        <span><b><?php echo $Discount_Percent; ?></b></span><br>
 
         <label>Discount Amount:</label>
         <span><b><u><?php echo $Discount_formatted; ?></u></b></span><br> 

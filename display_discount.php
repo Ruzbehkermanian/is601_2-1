@@ -18,8 +18,7 @@ $Discount_formatted = "$".number_format ($Discount); // Displaying $ sign for St
 // $Discount_formatted = "$".number_format ($Discount_Percent); // display the formatted discount with $ sign (Step 5)
 
 $Discount_Price = $List_Price - $Discount;
-$Discount_Price_formatted = "$".number_format ($Discount_Price); // display the formatted discount (Step 5)
-// price with $ sign
+$Discount_Price_formatted = "$".number_format ($Discount_Price); // display the formatted discount (Step 5)  price with $ sign
 ?>
 
 
@@ -36,13 +35,13 @@ $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the 
         <h1>Product Discount Calculator</h1>
 
         <label>Product Description:</label>
-        <span><b><i><?php echo $Product_Description; ?></i></b></span><br>
+        <span><?php echo htmlspecialchars($Product_Description); ?></span><br>
 
         <label>List Price:</label>
-        <span><b><?php echo $list_price; ?></b></span><br>
+        <span><?php echo htmlspecialchars($list_price); ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><b><?php echo $Discount_Percent; ?></b></span><br>
+        <span><?php echo htmlspecialchars($Discount_Percent); ?></span><br>
 
         <label>Discount Amount:</label>
         <span><b><u><?php echo $Discount_formatted; ?></u></b></span><br> 

@@ -1,3 +1,14 @@
+<?php
+
+$Product_Description = $_POST['product_description'];
+$List_Price = $_POST['list_price'];
+$Discount_Percentage = $_POST['discount_percent'];
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +20,13 @@
         <h1>This page is under construction</h1>
 
         <label>Product Description:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $Product_Description; ?></span><br>
 
         <label>List Price:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $List_Price; ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $Discount_Percentage; ?></span><br>
 
         <label>Discount Amount:</label>
         <span><?php echo ''; ?></span><br>

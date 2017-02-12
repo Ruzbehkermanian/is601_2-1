@@ -34,19 +34,19 @@ $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the 
         <h1>This page is under construction</h1>
 
         <label>Product Description:</label>
-        <span><?php echo $Product_Description; ?></span><br>
+        <span><b><i><?php echo $Product_Description; ?></i></b></span><br>
 
         <label>List Price:</label>
-        <span><?php echo $list_price; ?></span><br>
+        <span><b><?php echo $list_price; ?></b></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo $discount_percentage; ?></span><br>
+        <span><b><?php echo $discount_percentage; ?></b></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo $Discount_formatted; ?></span><br> 
+        <span><b><u><?php echo $Discount_formatted; ?></u></b></span><br> 
 
         <label>Discount Price:</label>
-        <span><?php echo $Discount_Price_formatted; ?></span><br>
+        <span><b><u><?php echo $Discount_Price_formatted; ?></u></b></span><br>
     </main>
 </body>
 </html>

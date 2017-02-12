@@ -13,10 +13,10 @@ $discount_percentage = $Discount_Percentage."%";
 //Step 4
 
 $Discount = $List_Price * $Discount_Percentage * .01; 
-$Discount_formatted = "$".number_format ($Discount); // display the formatted discount with $ sign
+$Discount_formatted = "$".number_format ($Discount); // display the formatted discount with $ sign (Step 5)
 
 $Discount_Price = $List_Price - $Discount;
-$Discount_Price_formatted = "$".number_format ($Discount_Price); // display the formatted discount
+$Discount_Price_formatted = "$".number_format ($Discount_Price); // display the formatted discount (Step 5)
 // price with $ sign
 ?>
 
@@ -43,7 +43,7 @@ $Discount_Price_formatted = "$".number_format ($Discount_Price); // display the 
         <span><?php echo $discount_percentage; ?></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo $Discount_formatted; ?></span><br>
+        <span><?php echo $Discount_formatted; ?></span><br> 
 
         <label>Discount Price:</label>
         <span><?php echo $Discount_Price_formatted; ?></span><br>
